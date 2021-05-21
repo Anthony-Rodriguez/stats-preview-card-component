@@ -1,0 +1,52 @@
+@import url(https://fonts.google.com/specimen/Lexend+Deca);
+
+:root {
+  --main-bg: hsl(233, 47%, 7%);
+  --card-bg: hsl(244, 38%, 16%);
+  --card-accent: hsl(277, 64%, 61%);
+  --heading-stats: hsl(0, 0%, 100%);
+  --main-paragraph: hsla(0, 0%, 100%, 0.75);
+  --stat-headings: hsla(0, 0%, 100%, 0.6);
+}
+
+html {
+  background: var(--main-bg);
+  font-family: Inter;
+}
+@media only screen and (max-width: 1440px) {
+  body {
+    margin-top: 7rem;
+    color: var(--main-paragraph);
+    font-size: 15px;
+  }
+
+  img {
+    border-radius: 0 10px 10px 0;
+  }
+
+  .content {
+    border-radius: 10px;
+    background-color: var(--card-bg);
+    width: 1050px;
+    margin: auto;
+    display: flex;
+  }
+  .info{
+    margin: 4rem 6rem 4rem 4rem;
+  }
+
+  .heading {
+    color: var(--heading-stats);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+  }
+
+  span {
+    color: var(--card-accent);
+  }
+
+  .paragraph {
+    margin-bottom: 2rem;
+  }
+}
