@@ -1,5 +1,3 @@
-@import url(https://fonts.google.com/specimen/Lexend+Deca);
-
 :root {
   --main-bg: hsl(233, 47%, 7%);
   --card-bg: hsl(244, 38%, 16%);
@@ -11,25 +9,34 @@
 
 html {
   background: var(--main-bg);
-  font-family: Inter;
 }
 @media only screen and (max-width: 1440px) {
   body {
+    font-family: Inter;
     margin-top: 7rem;
     color: var(--main-paragraph);
     font-size: 15px;
   }
-
-  img {
-    border-radius: 0 10px 10px 0;
-  }
-
   .content {
     border-radius: 10px;
     background-color: var(--card-bg);
     width: 1050px;
     margin: auto;
     display: flex;
+    position: relative;
+  }
+  .tinted {
+    position: relative;
+  }
+  .tinted img {
+    border-radius: 0 10px 10px 0;
+  }
+  tinted :before {
+   content: '';
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   box-shadow: 0 3000px rgba(204, 0, 255, 0.4) inset;
   }
   .info{
     margin: 4rem 6rem 4rem 4rem;
@@ -42,11 +49,31 @@ html {
     margin-bottom: 2rem;
   }
 
-  span {
+  #insight {
     color: var(--card-accent);
   }
 
   .paragraph {
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
+  }
+  .stats {
+    color: var(--stat-headings);
+    font-family: Lexend Deca;
+    font-size: .8em;
+    display: flex;
+    text-transform: uppercase;
+  }
+  .stats-first :where(.bold) {
+    text-transform: lowercase;
+    margin-right: 5em;
+  }
+  .stats-second {
+    margin-right: 5em;
+  }
+  .bold {
+    color: var(--heading-stats);
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: .25em;
   }
 }
